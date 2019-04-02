@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/x24">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/x10"
+        android:paddingEnd="@dimen/x10">
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/s16"
+            android:textColor="@color/color_333"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginBottom="@dimen/x10"
+            tools:text="Easy walk steps"/>
+
+        <TextView
+            android:id="@+id/desTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/s13"
+            android:textColor="@color/color_555"
+            android:maxLines="3"
+            android:layout_below="@id/titleTV"
+            android:layout_marginBottom="@dimen/x10"
+            tools:text="Walk 500 steps a day"/>
+
+        <TextView
+            android:id="@+id/goalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/s13"
+            android:textColor="@color/color_555"
+            android:maxLines="1"
+            android:layout_below="@id/desTV"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/x10"
+            tools:text="100"/>
+
+        <TextView
+            android:id="@+id/tropyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/s13"
+            android:textColor="@color/color_555"
+            android:maxLines="1"
+            android:layout_below="@id/goalTV"
+            android:drawableStart="@mipmap/grade_confidence"
+            android:drawablePadding="@dimen/x10"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/x10"
+            tools:text="medal"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

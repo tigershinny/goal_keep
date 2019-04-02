@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_goal">no goal</string>
+    <string name="successfully_subscribed">Successfully subscribed!!</string>
+    <string name="no_network">No Network!!</string>
+    <string name="unsuccessfully_subscribed">"There was a problem subscribing. %1$s"</string>
+    <string name="total_steps"> "Total steps: %1$d"</string>
+    <string name="left_steps"> "Need more steps: %1$d to get this medal"</string>
+    <string name="get_medal_suc"> "Cheers!!! you have won this medal"</string>
+    <string name="problem_get_steps"> "There was a problem getting the step count. %1$s"</string>
+</resources>

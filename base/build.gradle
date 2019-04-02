@@ -1,0 +1,81 @@
+apply plugin: 'com.android.library'
+apply plugin: "kotlin-kapt"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        flavorDimensions "default"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        tasks.lint.enabled = false
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    api deps.kotlin.stdlib
+
+    api deps.support.app_compat
+    api deps.support.recyclerview
+    api deps.support.design
+
+    api deps.dagger.runtime
+    api deps.dagger.android
+    api deps.dagger.android_support
+
+    kapt deps.dagger.android_support_compiler
+    kapt deps.dagger.compiler
+
+    api deps.gson.runtime
+
+    api deps.okhttp_logging_interceptor
+
+    api deps.lifecycle.runtime
+    api deps.lifecycle.livedata
+    api deps.lifecycle.extensions
+    api deps.lifecycle.java8
+
+    api deps.multidex
+    api deps.constraint_layout
+
+    api deps.coroutines.core
+    api deps.coroutines.android
+    api deps.coroutines.rx2
+
+    api deps.glide.runtime
+    kapt deps.glide.compiler
+    api deps.glide.glide_okhttp3_integration
+    api deps.glide.glide_annotations
+    testImplementation 'junit:junit:4.12'
+    //network
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.retrofit.adapter_coroutines
+    api deps.room.runtime
+    api deps.room.coroutines
+}
